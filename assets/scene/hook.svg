@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 210">
+  <defs>
+    <linearGradient id="gold" x1="26" y1="18" x2="92" y2="186" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff1a6"/>
+      <stop offset=".4" stop-color="#d99b38"/>
+      <stop offset="1" stop-color="#7b431c"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="27" y1="20" x2="88" y2="190" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff8d3"/>
+      <stop offset=".45" stop-color="#ffd368"/>
+      <stop offset="1" stop-color="#b96b2a"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.35 0 0 0 0 0.95 0 0 0 0 1 0 0 0 .8 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#glow)">
+    <path d="M61 15c15 0 27 12 27 27 0 12-8 23-19 26v36c0 16 9 25 20 25 8 0 15-4 19-10 3 30-16 59-45 66-28 7-57-9-67-36 10 9 22 13 35 10 17-4 28-18 28-36V69C47 65 39 55 39 42c0-15 12-27 22-27Z" fill="url(#gold)" stroke="#613319" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M61 29c7 0 13 6 13 13s-6 13-13 13-13-6-13-13 6-13 13-13Z" fill="#153345" stroke="#98f6ff" stroke-width="4"/>
+    <path d="M61 69v55c0 24-15 42-36 47" fill="none" stroke="url(#edge)" stroke-width="9" stroke-linecap="round"/>
+    <path d="M70 127c7 18 23 25 39 18" fill="none" stroke="#fff1a6" stroke-width="5" stroke-linecap="round" opacity=".85"/>
+    <path d="M79 88 94 73l14 15-15 15Z" fill="#f0429a" stroke="#ffd9ff" stroke-width="3"/>
+    <path d="M40 91 53 78l12 13-13 12Z" fill="#38ddff" stroke="#d9fbff" stroke-width="3"/>
+    <path d="M62 108 75 95l12 13-13 12Z" fill="#8a5cff" stroke="#ece4ff" stroke-width="3"/>
+  </g>
+</svg>
