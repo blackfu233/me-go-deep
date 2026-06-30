@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Go Deep Get Bigger Mobile Demo</title>
+  <link rel="stylesheet" href="styles.css?v=sequence-fx46">
+</head>
+<body>
+  <main class="phone">
+    <section class="game" aria-label="Go Deep Get Bigger demo">
+      <div class="hud top-hud">
+        <div class="stat">
+          <span>Balance</span>
+          <strong id="topBalanceLabel">1000.00</strong>
+        </div>
+        <div class="title-lockup">
+          <span>GO DEEP</span>
+          <strong id="depthLabel">0m</strong>
+          <em id="maxDepthLabel">/ 10000m</em>
+        </div>
+        <div class="stat right">
+          <span>Total Bet</span>
+          <strong id="topTotalBetLabel">0.00</strong>
+        </div>
+      </div>
+
+      <div class="ocean" id="ocean">
+        <div class="light-rays"></div>
+        <div class="chain" id="chain"></div>
+        <div class="water-column" id="waterColumn"></div>
+        <div class="fx-layer" id="fxLayer" aria-hidden="true"></div>
+        <div class="surface">
+          <div class="boat"></div>
+          <img class="hook-img" id="hook" src="assets/scene/hook-chain-integrated-v2.png" alt="">
+        </div>
+        <div class="vortex" id="vortex" hidden>
+          <img class="vortex-frame" id="vortexFrame" src="assets/anim/vortex/vortex_00.png" alt="">
+        </div>
+      </div>
+
+      <div class="event-stage" id="eventStage" hidden>
+        <div class="event-aura">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="event-card">
+          <img id="eventSymbol" alt="">
+          <div>
+            <p id="eventKicker"></p>
+            <h2 id="eventTitle"></h2>
+            <p id="eventText"></p>
+            <div class="event-range" id="eventRange"></div>
+          </div>
+        </div>
+        <div class="event-wheel" id="eventWheel"><span></span></div>
+        <p class="event-result" id="eventResult"></p>
+      </div>
+
+      <div class="pull-banner" id="pullBanner" hidden></div>
+      <div class="event-flash-card" id="eventFlashCard" hidden>
+        <span id="eventFlashKicker">EVENT</span>
+        <strong id="eventFlashTitle">MIRROR LINK</strong>
+      </div>
+      <div class="theme-badge" id="themeBadge">
+        <span id="themeName">Volcanic Ridge</span>
+        <em id="themeKicker">PUFFER SURGE</em>
+      </div>
+      <div class="theme-reveal" id="themeReveal" hidden>
+        <img class="theme-travel-frame" id="themeTravelFrame" src="assets/anim/ocean-travel/ocean-travel_00.png" alt="">
+        <div class="theme-reveal-card">
+          <span id="themeRevealKicker">OCEAN DISCOVERED</span>
+          <strong id="themeRevealName">Volcanic Ridge</strong>
+          <em id="themeRevealTrait">PUFFER SURGE</em>
+        </div>
+      </div>
+      <div class="charge-badge" id="chargeBadge" hidden>
+        <span>CHARGED</span>
+        <strong id="chargeTurns">0</strong>
+        <em id="chargeRange">3 ZONES</em>
+      </div>
+      <div class="settlement-screen" id="settlementScreen" hidden>
+        <div class="settlement-copy">
+          <span id="settlementKicker">SETTLEMENT</span>
+          <strong id="settlementTitle">BIG WIN</strong>
+          <em id="settlementAmount">0.00</em>
+          <small id="settlementRatio">0x</small>
+          <button id="settlementExitButton" type="button">NEXT ROUND</button>
+        </div>
+      </div>
+
+      <div class="bottom-console">
+        <div class="main-controls">
+          <div class="bet-panel" id="betPanel">
+            <button id="betDownButton" class="bet-arrow" type="button" aria-label="Decrease bet">&lt;</button>
+            <div class="bet-readout">
+              <span>BET</span>
+              <input id="betInput" type="number" min="1" max="100" step="1" value="10">
+            </div>
+            <button id="betUpButton" class="bet-arrow" type="button" aria-label="Increase bet">&gt;</button>
+          </div>
+          <button id="pullButton" class="pull-main" disabled>PULL UP</button>
+          <button id="deepButton" class="deep-main">GO DEEP</button>
+        </div>
+        <div class="bottom-bank">
+          <div>BALANCE: $ <strong id="balanceLabel">1000.00</strong></div>
+          <div>TOTAL BET: $ <strong id="totalBetLabel">0.00</strong></div>
+        </div>
+        <div class="mini-stats" hidden>
+          <div><span>Hooked</span><strong id="hookedLabel">0</strong></div>
+          <div><span>Events</span><strong id="eventLabel">0</strong></div>
+        </div>
+        <button id="resetButton" class="ghost reset-hidden" type="button">RESET</button>
+        <div class="ticker" id="log">Press GO DEEP to dive. PULL UP when ready.</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="game.js?v=sequence-fx46"></script>
+</body>
+</html>
